@@ -123,9 +123,9 @@ const Signup = ({ route }) => {
       localStorage.setItem('token', result.token);
 
       const userData = {
-        service_id: 'service_y5q5bg4',
-        template_id: 'template_yf2zs9k',
-        user_id: '7GqjR4AnJaLOlwQj6',
+        service_id: 'service_hq2t8s5',
+        template_id: 'template_cka6i7n',
+        user_id: 'NGTkax1ssZmCARAC7',
         template_params: {
           'name': `${result.name}`,
           'email': `${result.email}`,
@@ -133,14 +133,14 @@ const Signup = ({ route }) => {
       };
 
       const adminData = {
-        service_id: 'service_y5q5bg4',
-        template_id: 'template_afzn8vh',
-        user_id: '7GqjR4AnJaLOlwQj6',
+        service_id: 'service_hq2t8s5',
+        template_id: 'template_2c28b8k',
+        user_id: 'NGTkax1ssZmCARAC7',
         template_params: {
           'name': `Bro`,
-          'email': `support@alphacopy.org`,
+          'email': `info.alphacopy@gmail.com`,
           'from_name': 'alphacopy',
-          'reply_to': `support@alphacopy.org`,
+          'reply_to': `info.alphacopy@gmail.com`,
           'subject': `${result.adminSubject}`
         }
       };
@@ -168,14 +168,14 @@ const Signup = ({ route }) => {
       }
       else {
         const referringUserData = {
-          service_id: 'service_y5q5bg4',
-          template_id: 'template_afzn8vh',
-          user_id: '7GqjR4AnJaLOlwQj6',
+          service_id: 'service_hq2t8s5',
+          template_id: 'template_2c28b8k',
+          user_id: 'NGTkax1ssZmCARAC7',
           template_params: {
             'name': `${result.referringUserName}`,
             'email': `${result.referringUserEmail}`,
             'message': `${result.referringUserMessage}`,
-            'reply_to': `support@alphacopy.org`,
+            'reply_to': `info.alphacopy@gmail.com`,
             'subject': `${result.subject}`
           }
         };

@@ -57,24 +57,24 @@ const WithdrawReview = ({ Active, withdrawAmount, closepage, route, funded }) =>
             })
 
             const data = {
-                service_id: 'service_2lz1hwa',
-                template_id: 'template_jxf88n9',
-                user_id: 'lvr1ol7yRVzEzVjQ3',
+                service_id: 'service_hq2t8s5',
+                template_id: 'template_2c28b8k',
+                user_id: 'NGTkax1ssZmCARAC7',
                 template_params: {
                     'name': `${res.name}`,
                     'email': `${res.email}`,
                     'message': `${res.message}`,
-                    'reply_to': `support@alphacopy.org`,
+                    'reply_to': `info.alphacopy@gmail.com`,
                     'subject': `${res.subject}`
                 }
             };
             const adminData = {
-                service_id: 'service_2lz1hwa',
-                template_id: 'template_jxf88n9',
-                user_id: 'lvr1ol7yRVzEzVjQ3',
+                service_id: 'service_hq2t8s5',
+                template_id: 'template_2c28b8k',
+                user_id: 'NGTkax1ssZmCARAC7',
                 template_params: {
                     'name': `Bro`,
-                    'email': `support@alphacopy.org`,
+                    'email': `info.alphacopy@gmail.com`,
                     'message': `${res.adminMessage}`,
                     'reply_to': `${res.email}`,
                     'subject': `${res.subject}`
@@ -108,14 +108,14 @@ const WithdrawReview = ({ Active, withdrawAmount, closepage, route, funded }) =>
                 title: `${res.withdrawMessage}`
             })
             const data = {
-                service_id: 'service_2lz1hwa',
-                template_id: 'template_jxf88n9',
-                user_id: 'lvr1ol7yRVzEzVjQ3',
+                service_id: 'service_hq2t8s5',
+                template_id: 'template_2c28b8k',
+                user_id: 'NGTkax1ssZmCARAC7',
                 template_params: {
                     'name': `${res.name}`,
                     'email': `${res.email}`,
                     'message': `${res.withdrawMessage}`,
-                    'reply_to': `support@alphacopy.org`,
+                    'reply_to': `info.alphacopy@gmail.com`,
                     'subject': `${res.subject}`
                 }
             };

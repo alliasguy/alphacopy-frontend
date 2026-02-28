@@ -37,7 +37,7 @@ const Policy = () => {
 
             </h3>
             <p>
-              alphacopy is glad to receive your comments concerning this "Privacy Policy". In case you think that alphacopy does not follow the rules and violate this Statement, contact us at support@alphacopy.org We guarantee that we will take commercially reasonable efforts to discover and solve the problem.
+              alphacopy is glad to receive your comments concerning this "Privacy Policy". In case you think that alphacopy does not follow the rules and violate this Statement, contact us at info.alphacopy@gmail.com We guarantee that we will take commercially reasonable efforts to discover and solve the problem.
             </p>
           </div>
         </div>

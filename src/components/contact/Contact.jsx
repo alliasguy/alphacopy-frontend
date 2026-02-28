@@ -18,7 +18,7 @@ const Contact = () => {
                 </p>
 
                 <div className="contact-actions">
-                    <a href='mailto:support@alphacopy.org' className="contact-btn">
+                    <a href='mailto:info.alphacopy@gmail.com' className="contact-btn">
                         <FiMail /> Email Support
                     </a>
                 </div>

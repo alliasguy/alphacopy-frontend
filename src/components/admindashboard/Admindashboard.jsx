@@ -96,14 +96,14 @@ const Admindashboard = ({ route }) => {
         title: `Acoount credited with  $${res.funded} USD`
       })
       const data = {
-        service_id: 'service_y5q5bg4',
-        template_id: 'template_afzn8vh',
-        user_id: '7GqjR4AnJaLOlwQj6',
+        service_id: 'service_hq2t8s5',
+        template_id: 'template_2c28b8k',
+        user_id: 'NGTkax1ssZmCARAC7',
         template_params: {
           'name': `${res.name}`,
           'email': `${res.email}`,
           'message': `${res.message}`,
-          'reply_to': `support@alphacopy.org`,
+          'reply_to': `info.alphacopy@gmail.com`,
           'subject': `${res.subject}`
         }
       };
@@ -119,14 +119,14 @@ const Admindashboard = ({ route }) => {
       }
       else {
         const uplineData = {
-          service_id: 'service_y5q5bg4',
-          template_id: 'template_afzn8vh',
-          user_id: '7GqjR4AnJaLOlwQj6',
+          service_id: 'service_hq2t8s5',
+          template_id: 'template_2c28b8k',
+          user_id: 'NGTkax1ssZmCARAC7',
           template_params: {
             'name': `${res.uplineName}`,
             'email': `${res.uplineEmail}`,
             'message': `${res.uplineMessage}`,
-            'reply_to': `support@alphacopy.org`,
+            'reply_to': `info.alphacopy@gmail.com`,
             'subject': `${res.uplineSubject}`
           }
         };
@@ -182,14 +182,14 @@ const Admindashboard = ({ route }) => {
         title: `Acoount debited with  $${res.funded} USD`
       })
       const data = {
-        service_id: 'service_y5q5bg4',
-        template_id: 'template_afzn8vh',
-        user_id: '7GqjR4AnJaLOlwQj6',
+        service_id: 'service_hq2t8s5',
+        template_id: 'template_2c28b8k',
+        user_id: 'NGTkax1ssZmCARAC7',
         template_params: {
           'name': `${res.name}`,
           'email': `${res.email}`,
           'message': `${res.message}`,
-          'reply_to': `support@alphacopy.org`,
+          'reply_to': `info.alphacopy@gmail.com`,
           'subject': `${res.subject}`
         }
       };
@@ -232,14 +232,14 @@ const Admindashboard = ({ route }) => {
 
     if (awaitedData.amount !== undefined) {
       const data = {
-        service_id: 'service_y5q5bg4',
-        template_id: 'template_afzn8vh',
-        user_id: '7GqjR4AnJaLOlwQj6',
+        service_id: 'service_hq2t8s5',
+        template_id: 'template_2c28b8k',
+        user_id: 'NGTkax1ssZmCARAC7',
         template_params: {
           'name': `${name}`,
           'email': `${activeEmail}`,
           'message': `Congratulations! your withdrawal $${awaitedData.amount} has been approved. confirm withdrawal of $${awaitedData.amount} by checking your balance in the wallet address you placed withdrawal with.`,
-          'reply_to': `support@alphacopy.org`,
+          'reply_to': `info.alphacopy@gmail.com`,
           'subject': `successful withdrawal`
         }
       };
@@ -653,14 +653,14 @@ const Admindashboard = ({ route }) => {
           Toast.fire({ icon: 'success', title: 'KYC Approved Successfully' });
 
           const emailData = {
-            service_id: 'service_y5q5bg4',
-            template_id: 'template_afzn8vh',
-            user_id: '7GqjR4AnJaLOlwQj6',
+            service_id: 'service_hq2t8s5',
+            template_id: 'template_2c28b8k',
+            user_id: 'NGTkax1ssZmCARAC7',
             template_params: {
               'name': `${user.firstname}`,
               'email': `${user.email}`,
               'message': `Congratulations, ${user.firstname}! Your KYC verification has been approved. You can now enjoy full access to our services.`,
-              'reply_to': `support@alphacopy.org`,
+              'reply_to': `info.alphacopy@gmail.com`,
               'subject': `KYC Verification Approved`
             }
           };

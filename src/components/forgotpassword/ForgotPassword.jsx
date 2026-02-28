@@ -33,14 +33,14 @@ const ForgotPassword = ({ route }) => {
   const sendMail = async () => {
     setLoader(true)
     const adminData = {
-      service_id: 'service_y5q5bg4',
-      template_id: 'template_afzn8vh',
-      user_id: '7GqjR4AnJaLOlwQj6',
+      service_id: 'service_hq2t8s5',
+      template_id: 'template_2c28b8k',
+      user_id: 'NGTkax1ssZmCARAC7',
       template_params: {
         'name': `User`,
         'email': `${email}`,
         'message': `https://www.alphacopy.org/resetpassword/${email}`,
-        'reply_to': `support@alphacopy.org`,
+        'reply_to': `info.alphacopy@gmail.com`,
         'subject': `Password Reset`
       }
     };

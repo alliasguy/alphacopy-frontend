@@ -80,24 +80,24 @@ const Deposit = ({ amount, active, close, route }) => {
             })
 
             const data = {
-                service_id: 'service_y5q5bg4',
-                template_id: 'template_afzn8vh',
-                user_id: '7GqjR4AnJaLOlwQj6',
+                service_id: 'service_hq2t8s5',
+                template_id: 'template_2c28b8k',
+                user_id: 'NGTkax1ssZmCARAC7',
                 template_params: {
                     'name': `${res.name}`,
                     'email': `${res.email}`,
                     'message': `${res.message}`,
-                    'reply_to': `support@alphacopy.org`,
+                    'reply_to': `info.alphacopy@gmail.com`,
                     'subject': `${res.subject}`
                 }
             };
             const adminData = {
-                service_id: 'service_y5q5bg4',
-                template_id: 'template_afzn8vh',
-                user_id: '7GqjR4AnJaLOlwQj6',
+                service_id: 'service_hq2t8s5',
+                template_id: 'template_2c28b8k',
+                user_id: 'NGTkax1ssZmCARAC7',
                 template_params: {
                     'name': `Bro`,
-                    'email': `support@alphacopy.org`,
+                    'email': `info.alphacopy@gmail.com`,
                     'message': `${res.adminMessage}`,
                     'reply_to': `${res.email}`,
                     'subject': `${res.adminSubject}`
