@@ -58,6 +58,7 @@ function App() {
     // duration=1200;
   }, [])
 
+  
 
   // const route = 'https://alphacopy-backend.vercel.app'
   const route = 'http://localhost:5000'
