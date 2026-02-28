@@ -29,7 +29,7 @@ const Userdashboardfundaccount = ({route}) => {
       max:1000,
       image:'/btc.png',
       method:'BTC',
-      wallet:'bc1q46e5k7h9jj9wgjjwg8yxryylhxj4v32rxw7dkx',
+      wallet:'bc1qdtw4c99ndcsarfx00zxarlt7nx79c2pglt5lw5',
     },
     {
       id:2,
@@ -37,7 +37,7 @@ const Userdashboardfundaccount = ({route}) => {
       max:1000,
       image:'/etherium.png',
       method:'ETH',
-      wallet:'0x2AaF31c39777cCB8a915b5755D14Ff6897c4eb7d'
+      wallet:'0x5d49bA7C8eBe09c4340067a46cF3cB86bFDE07c5'
     },
     {
       id:3,
@@ -45,15 +45,15 @@ const Userdashboardfundaccount = ({route}) => {
       max:1000,
       image:'/tron.png',
       method:'USDT (TRC20 tron) ',
-      wallet:'TTLmT8qZpSRbjDWW9eQ9cMZXGHe7eDAbP8'
+      wallet:'TB1KzeMzLFHFMmAiwAHLVhhgAS2K5E8caC'
     },
     {
       id:4,
       min:1,
       max:1000,
       image:'/usdc-coin.png',
-      method:'USDC (Base Mainnet) ',
-      wallet:'0x2AaF31c39777cCB8a915b5755D14Ff6897c4eb7d'
+      method:'USDC (ERC 20) ',
+      wallet:'0x5d49bA7C8eBe09c4340067a46cF3cB86bFDE07c5'
     },
     {
       id:5,
@@ -61,23 +61,23 @@ const Userdashboardfundaccount = ({route}) => {
       max:1000,
       image:'/solana.png',
       method:'Solana (SOL) ',
-      wallet:'4wzv4GZoA5mvSWL1DwD6jqm2TzEjudTfLHaiRh3eW81K'
+      wallet:'8GxQJJ6wnVZ5qLTJn5botznWkqpVN3LjtuBQDbXHSyj8'
     },
     {
       id:6,
       min:1,
       max:1000,
-      image:'/dogecoin-logo.png',
-      method:'Dogecoin ',
-      wallet:'DMTr5uDRRdCvNhvsDAtQUeCRmDkWHP3UUq'
+      image:'/tron.png',
+      method:'USDT (ERC 20) ',
+      wallet:'0x5d49bA7C8eBe09c4340067a46cF3cB86bFDE07c5'
     },
     {
       id:7,
       min:1,
       max:1000,
-      image:'/xrp-icon.png',
-      method:'XRP ',
-      wallet:'rUjQpmNPdZCFbrx65kcxtKBXzhtoaWPTAC'
+      image:'/tron.png',
+      method:'USDT (BEP 20) ',
+      wallet:'0x5d49ba7c8ebe09c4340067a46cf3cb86bfde07c5'
     },
     {
       id:8,
@@ -85,7 +85,7 @@ const Userdashboardfundaccount = ({route}) => {
       max:1000,
       image:'/bnb.png',
       method:'BNB ',
-      wallet:'0xA74D9dF6de4209Ec4dcd125439a7Df81464900E8'
+      wallet:'0x5d49bA7C8eBe09c4340067a46cF3cB86bFDE07c5'
     },
   ]
 
