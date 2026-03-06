@@ -314,7 +314,7 @@ const Signup = ({ route }) => {
             e.preventDefault()
             checkDetails()
           }}>
-            <img src="/alphacopy-logo.png" alt="" className="signup-logo" onClick={() => {
+            <img src="/alphacopy-logo4.png" alt="" className="signup-logo" onClick={() => {
               navigate('/')
             }} />
             <span class="subtitle">Get started with alphacopy, just create an account and enjoy the experience.</span>

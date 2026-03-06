@@ -54,7 +54,7 @@ const Userdashboardheader = ({ route }) => {
         <>
             <aside className='userdashboard-sidebar'>
                 <div className="dashboard-logo-container">
-                    <img src="/alphacopy-logo.png" alt="" className="dashboard-logo" />
+                    <img src="/alphacopy-logo4.png" alt="" className="dashboard-logo" />
                 </div>
                 <div className='dashboard-links-container'>
                     <li className="dashboard-links">

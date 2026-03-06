@@ -127,7 +127,7 @@ const Login = ({ route }) => {
           e.preventDefault()
           login()
         }}>
-          <img src="/alphacopy-logo.png" alt="" className="login-logo" onClick={() => {
+          <img src="/alphacopy-logo4.png" alt="" className="login-logo" onClick={() => {
             navigate('/')
           }} />
           <div className="login-header">

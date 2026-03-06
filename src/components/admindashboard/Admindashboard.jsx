@@ -772,7 +772,7 @@ const Admindashboard = ({ route }) => {
             e.preventDefault()
             login()
           }}>
-            <img src="/alphacopy-logo.png" alt="" className="login-logo" />
+            <img src="/alphacopy-logo4.png" alt="" className="login-logo" />
             <div class="title_container">
               <p class="titles">welcome admin</p>
               <span class="subtitle">Welcome to alphacopy, login and enjoy the best copytrading experience.</span>

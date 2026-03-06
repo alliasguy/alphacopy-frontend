@@ -40,7 +40,7 @@ const Header = () => {
             transition={{ duration: 0.65 }}
         >
             <div className="logo-container">
-                <img src="/alphacopy-logo.png" alt="" className='txtlogo' />
+                <img src="/alphacopy-logo4.png" alt="" className='txtlogo' />
             </div>
             <nav>
                 <ul>
@@ -84,7 +84,7 @@ const Header = () => {
                 </div>
                 <div className="menu-card">
                     <div className="menu-card-image-conatiner">
-                        <img src="/alphacopy-logo.png" alt="" className='mobile-logo' />
+                        <img src="/alphacopy-logo2.png" alt="" className='mobile-logo' />
                     </div>
                     <ul className="list">
                         <li className="element"><Link to='/'>home</Link></li>
