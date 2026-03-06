@@ -54,7 +54,8 @@ const Landpage = () => {
           </div>
         </motion.div>
       </div>
-      {/* Raw Spread Advantage Section */}
+
+      {/* Raw Spread Advantage Section (Alpha Edge) */}
       <div className="raw-spread-section">
         <div className="raw-spread-container">
           {/* Left: Visual Widget Mockups */}
@@ -77,58 +78,6 @@ const Landpage = () => {
                 </div>
                 <div className="spread-row">
                   <span className="spread-tag">Spread 0.8</span>
-                  <div className="widget-actions">
-                    <button className="btn-buy">Buy</button>
-                    <button className="btn-sell">Sell</button>
-                  </div>
-                </div>
-              </div>
-
-              <div className="widget-card">
-                <div className="widget-header">
-                  <span className="symbol">AUDUSD</span>
-                  <span className="change positive">📈 +1.25%</span>
-                </div>
-                <div className="price-row">
-                  <div className="price-box">
-                    <span className="label">Bid</span>
-                    <span className="price">0.69<span className="big">58</span><sup>9</sup></span>
-                  </div>
-                  <div className="price-box">
-                    <span className="label">Ask</span>
-                    <span className="price">0.69<span className="big">69</span><sup>5</sup></span>
-                  </div>
-                </div>
-                <div className="spread-row">
-                  <span className="spread-tag">Spread 0.6</span>
-                  <div className="widget-actions">
-                    <button className="btn-buy">Buy</button>
-                    <button className="btn-sell">Sell</button>
-                  </div>
-                </div>
-              </div>
-
-              <div className="widget-card">
-                <div className="widget-header">
-                  <span className="symbol">GBPUSD</span>
-                  <span className="change negative">📉 -0.85%</span>
-                </div>
-                <div className="price-row">
-                  <div className="price-box">
-                    <span className="label">Bid</span>
-                    <span className="price">1.36<span className="big">84</span><sup>1</sup></span>
-                  </div>
-                  <div className="price-box">
-                    <span className="label">Ask</span>
-                    <span className="price">1.36<span className="big">87</span><sup>0</sup></span>
-                  </div>
-                </div>
-                <div className="spread-row">
-                  <span className="spread-tag">Spread 0.9</span>
-                  <div className="widget-actions">
-                    <button className="btn-buy">Buy</button>
-                    <button className="btn-sell">Sell</button>
-                  </div>
                 </div>
               </div>
 
@@ -149,10 +98,6 @@ const Landpage = () => {
                 </div>
                 <div className="spread-row">
                   <span className="spread-tag">Spread 4.0</span>
-                  <div className="widget-actions">
-                    <button className="btn-buy">Buy</button>
-                    <button className="btn-sell">Sell</button>
-                  </div>
                 </div>
               </div>
             </div>
@@ -162,8 +107,7 @@ const Landpage = () => {
           <div className="raw-content-col">
             <h2 className="section-headline">The Alpha Edge<br />Advantage</h2>
             <p className="section-desc">
-              Superior edges define our specialized network ecosystem. Execute with zero-latency, premium pricing, elite liquidity, and total transparency.
-              Alphacopy provides the ultimate high-performance hub for professional scalpers and institutional investors.
+              Superior edges define our specialized network ecosystem. Execute with zero-latency, premium pricing, and elite liquidity.
             </p>
             <div className="raw-actions" style={{ justifyContent: 'center' }}>
               <button className="btn-primary-green" onClick={() => navigate('/signup')}>Start Trading</button>
