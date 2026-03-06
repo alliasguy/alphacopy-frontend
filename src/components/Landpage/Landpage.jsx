@@ -49,7 +49,7 @@ const Landpage = () => {
 
           <div className='hero-actions'>
             <button className='btn-primary-green' onClick={() => navigate('/signup')}>
-              Initialize Protocol
+              Start Trading
             </button>
           </div>
         </motion.div>
@@ -165,9 +165,8 @@ const Landpage = () => {
               Superior edges define our specialized network ecosystem. Execute with zero-latency, premium pricing, elite liquidity, and total transparency.
               Alphacopy provides the ultimate high-performance hub for professional scalpers and institutional investors.
             </p>
-            <div className="raw-actions">
-              <button className="btn-primary-green" onClick={() => navigate('/signup')}>Initialize Protocol</button>
-              <button className="btn-secondary-outline" onClick={() => navigate('/signup')}>Explore Live Nodes</button>
+            <div className="raw-actions" style={{ justifyContent: 'center' }}>
+              <button className="btn-primary-green" onClick={() => navigate('/signup')}>Start Trading</button>
             </div>
           </div>
         </div>
