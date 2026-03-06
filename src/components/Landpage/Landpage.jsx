@@ -55,6 +55,22 @@ const Landpage = () => {
         </motion.div>
       </div>
 
+      {/* Stats Bar */}
+      <div className="stats-bar-section">
+        <div className="stat-item">
+          <span className="stat-value">{copiers.toLocaleString()}</span>
+          <span className="stat-label">Active Nodes</span>
+        </div>
+        <div className="stat-item">
+          <span className="stat-value">0.0ms</span>
+          <span className="stat-label">Latency</span>
+        </div>
+        <div className="stat-item">
+          <span className="stat-value">99.9%</span>
+          <span className="stat-label">Accuracy</span>
+        </div>
+      </div>
+
       {/* Raw Spread Advantage Section (Alpha Edge) */}
       <div className="raw-spread-section">
         <div className="raw-spread-container">
@@ -78,6 +94,58 @@ const Landpage = () => {
                 </div>
                 <div className="spread-row">
                   <span className="spread-tag">Spread 0.8</span>
+                  <div className="widget-actions">
+                    <button className="btn-buy">Buy</button>
+                    <button className="btn-sell">Sell</button>
+                  </div>
+                </div>
+              </div>
+
+              <div className="widget-card">
+                <div className="widget-header">
+                  <span className="symbol">AUDUSD</span>
+                  <span className="change positive">📈 +1.25%</span>
+                </div>
+                <div className="price-row">
+                  <div className="price-box">
+                    <span className="label">Bid</span>
+                    <span className="price">0.69<span className="big">58</span><sup>9</sup></span>
+                  </div>
+                  <div className="price-box">
+                    <span className="label">Ask</span>
+                    <span className="price">0.69<span className="big">69</span><sup>5</sup></span>
+                  </div>
+                </div>
+                <div className="spread-row">
+                  <span className="spread-tag">Spread 0.6</span>
+                  <div className="widget-actions">
+                    <button className="btn-buy">Buy</button>
+                    <button className="btn-sell">Sell</button>
+                  </div>
+                </div>
+              </div>
+
+              <div className="widget-card">
+                <div className="widget-header">
+                  <span className="symbol">GBPUSD</span>
+                  <span className="change negative">📉 -0.85%</span>
+                </div>
+                <div className="price-row">
+                  <div className="price-box">
+                    <span className="label">Bid</span>
+                    <span className="price">1.36<span className="big">84</span><sup>1</sup></span>
+                  </div>
+                  <div className="price-box">
+                    <span className="label">Ask</span>
+                    <span className="price">1.36<span className="big">87</span><sup>0</sup></span>
+                  </div>
+                </div>
+                <div className="spread-row">
+                  <span className="spread-tag">Spread 0.9</span>
+                  <div className="widget-actions">
+                    <button className="btn-buy">Buy</button>
+                    <button className="btn-sell">Sell</button>
+                  </div>
                 </div>
               </div>
 
@@ -98,6 +166,10 @@ const Landpage = () => {
                 </div>
                 <div className="spread-row">
                   <span className="spread-tag">Spread 4.0</span>
+                  <div className="widget-actions">
+                    <button className="btn-buy">Buy</button>
+                    <button className="btn-sell">Sell</button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -107,10 +179,12 @@ const Landpage = () => {
           <div className="raw-content-col">
             <h2 className="section-headline">The Alpha Edge<br />Advantage</h2>
             <p className="section-desc">
-              Superior edges define our specialized network ecosystem. Execute with zero-latency, premium pricing, and elite liquidity.
+              Superior edges define our specialized network ecosystem. Execute with zero-latency, premium pricing, elite liquidity, and total transparency.
+              Alphacopy provides the ultimate high-performance hub for professional scalpers and institutional investors.
             </p>
             <div className="raw-actions" style={{ justifyContent: 'center' }}>
               <button className="btn-primary-green" onClick={() => navigate('/signup')}>Start Trading</button>
+              <button className="btn-secondary-outline" onClick={() => navigate('/signup')}>Explore Live Nodes</button>
             </div>
           </div>
         </div>
