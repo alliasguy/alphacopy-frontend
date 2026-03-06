@@ -54,23 +54,6 @@ const Landpage = () => {
           </div>
         </motion.div>
       </div>
-
-      {/* Stats Bar */}
-      <div className="stats-bar-section">
-        <div className="stat-item">
-          <span className="stat-value">{copiers.toLocaleString()}</span>
-          <span className="stat-label">Active Nodes</span>
-        </div>
-        <div className="stat-item">
-          <span className="stat-value">0.0ms</span>
-          <span className="stat-label">Latency</span>
-        </div>
-        <div className="stat-item">
-          <span className="stat-value">99.9%</span>
-          <span className="stat-label">Accuracy</span>
-        </div>
-      </div>
-
       {/* Raw Spread Advantage Section (Alpha Edge) */}
       <div className="raw-spread-section">
         <div className="raw-spread-container">
