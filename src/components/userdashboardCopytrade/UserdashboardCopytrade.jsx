@@ -111,6 +111,9 @@ const UserdashboardCopytrade = ({ route }) => {
                     <td>trade pair</td>
                     <td>amount</td>
                     <td>type</td>
+                    <td>Order Price</td>
+                    <td>Entry Price</td>
+                    <td>Closing Price</td>
                     <td>date</td>
                   </tr>
                 </thead>
@@ -121,6 +124,9 @@ const UserdashboardCopytrade = ({ route }) => {
                         <td>{refer.pair}</td>
                         <td>$ {Number(refer.amount).toFixed(2)} USD</td>
                         <td className={`${refer.tradeType === 'profit' ? 'profit' : 'loss'}`}> {refer.tradeType}</td>
+                        <td>{refer.orderPrice || '---'}</td>
+                        <td>{refer.entryPrice || '---'}</td>
+                        <td>{refer.closingPrice || '---'}</td>
                         <td>{refer.date}</td>
                       </tr>
                     )

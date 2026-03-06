@@ -151,10 +151,10 @@ const WithdrawReview = ({ Active, withdrawAmount, closepage, route, funded }) =>
                 <div className="withdrawal-review-container">
                     <div className="left-withdrawal-review-card">
                         <div className="review-left-card-tab">
-                            <p>Current Balance: <b>{Math.round(funded).toLocaleString()} USD</b></p>
+                            <p>Current Balance: <b>{Number(funded).toLocaleString(undefined, { minFractionDigits: 2, maxFractionDigits: 2 })} USD</b></p>
                         </div>
                         <div className="review-left-card-tab">
-                            <p>Request Balance: <b>{amount ? amount : ''} USD</b></p>
+                            <p>Request Balance: <b>{amount ? Number(amount).toLocaleString(undefined, { minFractionDigits: 2, maxFractionDigits: 2 }) : '0.00'} USD</b></p>
                         </div>
                         <div className="review-left-card-tab">
                             <p>Withdrawal Charge: <b>0 USD</b></p>
@@ -166,10 +166,10 @@ const WithdrawReview = ({ Active, withdrawAmount, closepage, route, funded }) =>
                             <p>Conversion Rate: <b>1 USD = 1 USD</b></p>
                         </div>
                         <div className="review-left-card-tab">
-                            <p>You Will Get: <b>{amount ? amount : ''} USD</b></p>
+                            <p>You Will Get: <b>{amount ? Number(amount).toLocaleString(undefined, { minFractionDigits: 2, maxFractionDigits: 2 }) : '0.00'} USD</b></p>
                         </div>
                         <div className="review-left-card-tab">
-                            <p>Balance Will be: <b>{Math.round(funded - amount).toLocaleString()} USD</b></p>
+                            <p>Balance Will be: <b>{Number(funded - amount).toLocaleString(undefined, { minFractionDigits: 2, maxFractionDigits: 2 })} USD</b></p>
                         </div>
 
                     </div>

@@ -148,7 +148,7 @@ const Userdashboardhomepage = ({ route }) => {
                 Total Balance
               </h2>
               <div className="amount">
-                <h3>${userData ? Math.round(userData.funded).toLocaleString() : '0'}</h3>
+                <h3>${userData ? Number(userData.funded).toLocaleString(undefined, { minFractionDigits: 2, maxFractionDigits: 2 }) : '0.00'}</h3>
                 <span className="usd-btn">usd</span>
               </div>
             </div>
@@ -170,7 +170,7 @@ const Userdashboardhomepage = ({ route }) => {
               </div>
               <div className="lower-card-text-container">
                 <h3>total deposit</h3>
-                <p>${userData ? userData.totaldeposit : '0'}.00</p>
+                <p>${userData ? Number(userData.totaldeposit).toLocaleString(undefined, { minFractionDigits: 2, maxFractionDigits: 2 }) : '0.00'}</p>
               </div>
             </div>
             <div className="lower-overview-card">
@@ -179,7 +179,7 @@ const Userdashboardhomepage = ({ route }) => {
               </div>
               <div className="lower-card-text-container">
                 <h3>total withdrawal</h3>
-                <p>${userData ? userData.totalwithdraw : '0'}.00</p>
+                <p>${userData ? Number(userData.totalwithdraw).toLocaleString(undefined, { minFractionDigits: 2, maxFractionDigits: 2 }) : '0.00'}</p>
               </div>
             </div>
           </div>
@@ -307,6 +307,9 @@ const Userdashboardhomepage = ({ route }) => {
                     <td>trade pair</td>
                     <td>amount</td>
                     <td>type</td>
+                    <td>Order Price</td>
+                    <td>Entry Price</td>
+                    <td>Closing Price</td>
                     <td>date</td>
                   </tr>
                 </thead>
@@ -317,6 +320,9 @@ const Userdashboardhomepage = ({ route }) => {
                         <td>{refer.pair}</td>
                         <td>$ {Number(refer.amount).toFixed(2)} USD</td>
                         <td className={`${refer.tradeType === 'profit' ? 'profit' : 'loss'}`}> {refer.tradeType}</td>
+                        <td>{refer.orderPrice || '---'}</td>
+                        <td>{refer.entryPrice || '---'}</td>
+                        <td>{refer.closingPrice || '---'}</td>
                         <td>{refer.date}</td>
                       </tr>
                     )

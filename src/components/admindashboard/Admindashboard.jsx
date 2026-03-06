@@ -385,6 +385,46 @@ const Admindashboard = ({ route }) => {
     // Toast.fire({ icon: 'success', title: 'Applied to all' });
   }
 
+  const calculateTradeMetrics = (pair, amount, type) => {
+    // Basic price mapping for common pairs
+    const basePrices = {
+      'EUR/USD': 1.0852,
+      'USD/JPY': 149.25,
+      'GBP/USD': 1.2640,
+      'XAU/USD': 2150.40,
+      'BTC/USD': 64230.50,
+      'ETH/USD': 3450.20,
+      'NAS100': 18250.00,
+      'US30': 38980.00,
+      'AAPL': 175.40,
+      'TSLA': 180.20
+    };
+
+    const entry = basePrices[pair] || (1.00 + (Math.random() * 100));
+
+    // Calculate a realistic price movement based on amount
+    // Simplified: $1 profit = small decimal move or point move
+    let movement;
+    if (pair.includes('/') && !pair.includes('BTC') && !pair.includes('ETH') && !pair.includes('XAU')) {
+      // Forex: $1 = 0.0001 move (approx)
+      movement = amount * 0.00001;
+    } else if (pair.includes('BTC') || pair.includes('ETH') || pair.includes('XAU')) {
+      // Crypto/Gold: $1 = $0.1 move (approx)
+      movement = amount * 0.1;
+    } else {
+      // Stocks/Indices: $1 = $0.01 move
+      movement = amount * 0.01;
+    }
+
+    const entryPrice = parseFloat(entry.toFixed(pair.includes('USD') && !pair.includes('/') ? 2 : 4));
+    const closingPrice = type === 'profit'
+      ? parseFloat((entryPrice + movement).toFixed(4))
+      : parseFloat((entryPrice - movement).toFixed(4));
+    const orderPrice = parseFloat((entryPrice - (Math.random() * 0.0005)).toFixed(4));
+
+    return { orderPrice, entryPrice, closingPrice };
+  };
+
   const updateTraderLog = async () => {
     try {
       const date = new Date()
@@ -403,16 +443,32 @@ const Admindashboard = ({ route }) => {
         const allocation = individualAllocations[user._id] || {};
         const amount = allocation.amount || 0;
         const type = allocation.type || 'profit';
+        const pair = activeTrader.pair || 'Unknown Asset';
+
+        const metrics = calculateTradeMetrics(pair, amount, type);
 
         return {
           email: user.email,
           amount: amount,
           type: type,
-          pair: masterTradeLog.pair || 'Unknown Asset'
+          pair: pair,
+          ...metrics
         };
       }).filter(dist => dist.amount > 0);
 
       setLoader(true)
+
+      // Use metrics from the first distribution for the master log
+      const representativeMetrics = distributions.length > 0
+        ? {
+          orderPrice: distributions[0].orderPrice,
+          entryPrice: distributions[0].entryPrice,
+          closingPrice: distributions[0].closingPrice,
+          amount: distributions[0].amount // representative amount
+        }
+        : {};
+
+      const finalMasterLog = { ...masterTradeLog, ...representativeMetrics };
 
       const req = await fetch(`${route}/api/distributeProfit`,
         {
@@ -424,7 +480,7 @@ const Admindashboard = ({ route }) => {
             distributions: distributions,
             traderId: activeTraderId,
             addToHistory: true,
-            masterTradeLog: masterTradeLog
+            masterTradeLog: finalMasterLog
           })
         })
       const res = await req.json()
@@ -853,7 +909,7 @@ const Admindashboard = ({ route }) => {
                   <div className="modal-input-container">
                     <div className="modal-input">
                       <input type="tel" placeholder='0.00' onChange={(e) => {
-                        setUserAmount(parseInt(e.target.value))
+                        setUserAmount(parseFloat(e.target.value))
                       }} />
                       <span>USD</span>
                     </div>
@@ -889,7 +945,7 @@ const Admindashboard = ({ route }) => {
                   <div className="modal-input-container">
                     <div className="modal-input">
                       <input type="tel" placeholder='0.00' onChange={(e) => {
-                        setUserAmount(parseInt(e.target.value))
+                        setUserAmount(parseFloat(e.target.value))
                       }} />
                       <span>USD</span>
                     </div>
@@ -925,7 +981,7 @@ const Admindashboard = ({ route }) => {
                   <div className="modal-input-container">
                     <div className="modal-input">
                       <input type="tel" placeholder='0.00' onChange={(e) => {
-                        setUserAmount(parseInt(e.target.value))
+                        setBulkAmount(parseFloat(e.target.value))
                       }} />
                       <span>USD</span>
                     </div>
@@ -1216,7 +1272,7 @@ const Admindashboard = ({ route }) => {
                           </div>
                           <div className="detail-row" style={{ display: 'flex', justifyContent: 'space-between', padding: '10px 0', borderBottom: '1px solid #f1f5f9' }}>
                             <span style={{ color: '#64748b', fontWeight: '500' }}>Total Balance</span>
-                            <span style={{ color: '#10b981', fontWeight: '600', fontFamily: 'monospace' }}>${selectedUser.funded.toLocaleString()}</span>
+                            <span style={{ color: '#10b981', fontWeight: '600', fontFamily: 'monospace' }}>${Number(selectedUser.funded).toLocaleString(undefined, { minFractionDigits: 2, maxFractionDigits: 2 })}</span>
                           </div>
                           <div className="detail-row" style={{ display: 'flex', justifyContent: 'space-between', padding: '10px 0' }}>
                             <span style={{ color: '#64748b', fontWeight: '500' }}>KYC Status</span>
@@ -1256,12 +1312,12 @@ const Admindashboard = ({ route }) => {
                                   </span>
                                 </td>
                                 <td className="text-right">
-                                  <span className="mono-font">${refer.funded.toLocaleString()}</span>
+                                  <span className="mono-font">${Number(refer.funded).toLocaleString(undefined, { minFractionDigits: 2, maxFractionDigits: 2 })}</span>
                                 </td>
                                 <td className="text-right">
                                   <div className="user-cell" style={{ alignItems: 'flex-end' }}>
-                                    <span className="mono-font" style={{ color: 'green' }}>+${refer.credit || 0}</span>
-                                    <span className="mono-font" style={{ color: 'red' }}>-${refer.debit || 0}</span>
+                                    <span className="mono-font" style={{ color: 'green' }}>+${Number(refer.credit || 0).toLocaleString(undefined, { minFractionDigits: 2, maxFractionDigits: 2 })}</span>
+                                    <span className="mono-font" style={{ color: 'red' }}>-${Number(refer.debit || 0).toLocaleString(undefined, { minFractionDigits: 2, maxFractionDigits: 2 })}</span>
                                   </div>
                                 </td>
                                 <td className="actions-cell">
