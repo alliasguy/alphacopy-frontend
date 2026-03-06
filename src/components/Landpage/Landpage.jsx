@@ -38,13 +38,13 @@ const Landpage = () => {
           transition={{ duration: 0.8 }}
         >
           <h1 className='hero-headline'>
-            Experience Raw Spread Trading with a<br />
-            <span className='hero-highlight-text'>Smart Mirror Trading Platform</span>
+            Master Elite Market Strategies with our<br />
+            <span className='hero-highlight-text'>Intelligent Mirror Protocol</span>
           </h1>
 
           <p className='hero-subheadline'>
-            Copy expert traders automatically. Mirror their<br />
-            strategies with precision and ease across global markets.
+            Synchronize professional tactics instantly. Replicate<br />
+            winning moves with absolute accuracy in real-time.
           </p>
 
           <div className='hero-actions'>
@@ -160,10 +160,10 @@ const Landpage = () => {
 
           {/* Right: Content */}
           <div className="raw-content-col">
-            <h2 className="section-headline">The Raw Spread<br />Advantage</h2>
+            <h2 className="section-headline">The Alpha Edge<br />Advantage</h2>
             <p className="section-desc">
-              Raw Spreads are the difference you have been waiting for. Trade with spreads from 0.0 pips, no requotes, best possible prices and no restrictions.
-              alphacopy is the multi-asset trading platform of choice for high volume traders, scalpers and robots.
+              Superior edges define our specialized network ecosystem. Execute with zero-latency, premium pricing, elite liquidity, and total transparency.
+              Alphacopy provides the ultimate high-performance hub for professional scalpers and institutional investors.
             </p>
             <div className="raw-actions">
               <button className="btn-primary-green" onClick={() => navigate('/signup')}>Start Trading</button>

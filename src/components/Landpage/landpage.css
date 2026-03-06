@@ -3,18 +3,20 @@
 .landpage {
   width: 100%;
   min-height: 100vh;
-  background-color: #000000;
-  /* Pure Black */
+  background-color: #02040a;
+  /* Deep Space Black */
   background-image:
-    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E"),
-    radial-gradient(circle at 50% -20%, rgba(35, 83, 138, 0.4) 0%, transparent 60%);
+    radial-gradient(at 0% 0%, hsla(210, 100%, 15%, 1) 0, transparent 50%),
+    radial-gradient(at 50% 0%, hsla(225, 100%, 10%, 1) 0, transparent 50%),
+    radial-gradient(at 100% 0%, hsla(190, 100%, 15%, 1) 0, transparent 50%),
+    radial-gradient(at 50% 100%, hsla(210, 100%, 5%, 1) 0, transparent 50%);
   position: relative;
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
 }
 
-/* Blue/Teal Rays Effect */
+/* Moving Grid & Mesh Effect */
 .background-effects {
   position: absolute;
   top: 0;
@@ -23,16 +25,57 @@
   height: 100%;
   z-index: 0;
   pointer-events: none;
-  background:
-    repeating-linear-gradient(90deg,
-      transparent 0%,
-      transparent 45%,
-      rgba(167, 207, 223, 0.03) 48%,
-      rgba(167, 207, 223, 0.08) 50%,
-      rgba(167, 207, 223, 0.03) 52%,
-      transparent 55%,
-      transparent 100%);
-  opacity: 0.6;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  mask-image: radial-gradient(circle at center, black, transparent 80%);
+  animation: gridMove 20s linear infinite;
+}
+
+@keyframes gridMove {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 50px 50px;
+  }
+}
+
+.glow-orb {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  filter: blur(80px);
+  opacity: 0.15;
+  border-radius: 50%;
+  z-index: 1;
+  pointer-events: none;
+  animation: orbFloat 10s ease-in-out infinite alternate;
+}
+
+.glow-orb.top-left {
+  top: -10%;
+  left: -5%;
+  background: radial-gradient(circle, #23538A, transparent);
+}
+
+.glow-orb.bottom-right {
+  bottom: -10%;
+  right: -5%;
+  background: radial-gradient(circle, #00d2ff, transparent);
+  animation-delay: -5s;
+}
+
+@keyframes orbFloat {
+  from {
+    transform: translate(0, 0) scale(1);
+  }
+
+  to {
+    transform: translate(30px, 30px) scale(1.1);
+  }
 }
 
 /* Centered Content */
