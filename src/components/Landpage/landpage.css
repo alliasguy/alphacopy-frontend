@@ -2,7 +2,8 @@
 
 .landpage {
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
   background-color: #02040a;
   /* Deep Space Black */
   background-image:
@@ -11,7 +12,6 @@
     radial-gradient(at 100% 0%, hsla(190, 100%, 15%, 1) 0, transparent 50%),
     radial-gradient(at 50% 100%, hsla(210, 100%, 5%, 1) 0, transparent 50%);
   position: relative;
-  overflow-x: hidden;
   display: flex;
   flex-direction: column;
 }
@@ -105,8 +105,8 @@
 
 .hero-headline {
   font-family: 'Inter', sans-serif;
-  /* Ensuring clean modern font */
-  font-size: 3.5rem;
+  font-size: 2.8rem;
+  /* Smaller headline */
   line-height: 1.1;
   font-weight: 700;
   color: white;
@@ -197,8 +197,12 @@
 
 /* Raw Spread Section (Alpha Edge) */
 .raw-spread-section {
-  padding: 40px 5% 100px;
+  padding: 10px 5% 40px;
+  /* Compacted padding */
   background-color: transparent;
+  flex: 1;
+  display: flex;
+  align-items: center;
 }
 
 .raw-spread-container {
@@ -347,7 +351,8 @@ sup {
 }
 
 .section-headline {
-  font-size: 3rem;
+  font-size: 2.2rem;
+  /* Smaller section headline */
   font-weight: 700;
   color: white;
   line-height: 1.1;
