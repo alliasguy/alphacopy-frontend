@@ -317,7 +317,7 @@ const Signup = ({ route }) => {
             <img src="/alphacopy-logo4.png" alt="" className="signup-logo" onClick={() => {
               navigate('/')
             }} />
-            <span class="subtitle">Get started with alphacopy, just create an account and enjoy the experience.</span>
+            <span class="subtitle">Initialize your Alpha Edge node. Create an account to synchronize with our Intelligent Mirror Protocol.</span>
             <div class="input_containers">
               <label class="input_labels" for="email_field">Firstname</label>
               <span className="icont">

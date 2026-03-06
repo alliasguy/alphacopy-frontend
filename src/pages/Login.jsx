@@ -132,7 +132,7 @@ const Login = ({ route }) => {
           }} />
           <div className="login-header">
             <span class="title">Log in</span>
-            <span class="subtitle">Welcome to alphacopy, login and enjoy the best investment experience.</span>
+            <span class="subtitle">Access the Alpha Protocol. Synchronize your account to begin mirroring elite market strategies.</span>
           </div>
           <br />
           <div class="input_containers">

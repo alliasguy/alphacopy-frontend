@@ -193,12 +193,10 @@
   font-weight: 600;
 }
 
-/* Raw Spread Section */
+/* Raw Spread Section (Alpha Edge) */
 .raw-spread-section {
   padding: 40px 5% 100px;
-  background-color: #020202;
-  /* Deep dark bg */
-  background-image: radial-gradient(circle at 10% 50%, rgba(35, 83, 138, 0.05) 0%, transparent 40%);
+  background-color: transparent;
 }
 
 .raw-spread-container {
