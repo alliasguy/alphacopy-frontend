@@ -17,9 +17,9 @@ const Home = () => {
   return (
     <main className='home-img'>
       <Landpage />
-      <Mt5Section />
-      <Videoframe />
       <TeslaWidgetContainer />
+      <Videoframe />
+      <Mt5Section />
       <Why />
       <Faqcard />
       <About />
