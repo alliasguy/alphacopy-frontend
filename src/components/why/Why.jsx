@@ -12,7 +12,7 @@ const Why = () => {
                     <h1>Market  <span className="highlight">rates</span></h1>
                     <p>comprehensive features</p>
                 </div>
-                <img src="/bellmockup5.png" alt="" className="mockup" data-aos="fade-up" />
+                <img src="/alphacopy mockup3.png" alt="" className="mockup" data-aos="fade-up" />
             </div>
 
             <div className="why-choose-us-card-container">
