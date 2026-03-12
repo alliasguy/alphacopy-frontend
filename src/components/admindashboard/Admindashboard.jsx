@@ -445,14 +445,14 @@ const Admindashboard = ({ route }) => {
         const type = allocation.type || 'profit';
         const pair = activeTrader.pair || 'Unknown Asset';
 
-        const metrics = calculateTradeMetrics(pair, amount, type);
-
         return {
           email: user.email,
           amount: amount,
           type: type,
           pair: pair,
-          ...metrics
+          orderPrice: parseFloat(allocation.orderPrice) || 0,
+          entryPrice: parseFloat(allocation.entryPrice) || 0,
+          closingPrice: parseFloat(allocation.closingPrice) || 0
         };
       }).filter(dist => dist.amount > 0);
 
@@ -1155,7 +1155,7 @@ const Admindashboard = ({ route }) => {
                                 <span className="ct-email">{user.email}</span>
                                 <span className="ct-balance">Bal: ${user.funded}</span>
                               </div>
-                              <div className="ct-inputs">
+                              <div className="ct-inputs" style={{ display: 'flex', flexWrap: 'wrap', gap: '5px', marginTop: '5px' }}>
                                 <input
                                   type="number"
                                   placeholder="Amt"
@@ -1181,6 +1181,42 @@ const Admindashboard = ({ route }) => {
                                   <option value="profit">Profit</option>
                                   <option value="loss">Loss</option>
                                 </select>
+                                <input
+                                  type="number"
+                                  placeholder="Order Price"
+                                  className="ct-amount-input"
+                                  value={individualAllocations[user._id]?.orderPrice || ''}
+                                  onChange={(e) => {
+                                    setIndividualAllocations({
+                                      ...individualAllocations,
+                                      [user._id]: { ...individualAllocations[user._id], orderPrice: e.target.value }
+                                    })
+                                  }}
+                                />
+                                <input
+                                  type="number"
+                                  placeholder="Entry Price"
+                                  className="ct-amount-input"
+                                  value={individualAllocations[user._id]?.entryPrice || ''}
+                                  onChange={(e) => {
+                                    setIndividualAllocations({
+                                      ...individualAllocations,
+                                      [user._id]: { ...individualAllocations[user._id], entryPrice: e.target.value }
+                                    })
+                                  }}
+                                />
+                                <input
+                                  type="number"
+                                  placeholder="Closing Price"
+                                  className="ct-amount-input"
+                                  value={individualAllocations[user._id]?.closingPrice || ''}
+                                  onChange={(e) => {
+                                    setIndividualAllocations({
+                                      ...individualAllocations,
+                                      [user._id]: { ...individualAllocations[user._id], closingPrice: e.target.value }
+                                    })
+                                  }}
+                                />
                               </div>
                             </div>
                           ))}
@@ -1573,7 +1609,7 @@ const Admindashboard = ({ route }) => {
 
                                     const initialAllocations = {};
                                     tradersUsers.forEach(u => {
-                                      initialAllocations[u._id] = { amount: '', type: 'profit' };
+                                      initialAllocations[u._id] = { amount: '', type: 'profit', orderPrice: '', entryPrice: '', closingPrice: '' };
                                     });
                                     setIndividualAllocations(initialAllocations);
                                   }
